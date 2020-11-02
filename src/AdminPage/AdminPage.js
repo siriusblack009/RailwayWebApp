@@ -1,14 +1,18 @@
+
 import React from 'react'
+import Header from './Header'
+import Box from './Box'
 import './AdminPage.css'
-import Head from './Head.js'
-import Foot from './Foot'
 function AdminPage() {
-    return (
-        <div className="adminpage">
-            <Head/>
-            <Foot/>
-        </div>
-    )
+  return (
+    <div className="super__container">
+    <div className='container'>
+      <Header/>
+      <Box/>
+    </div>
+    </div>
+  )
 }
 
 export default AdminPage
+

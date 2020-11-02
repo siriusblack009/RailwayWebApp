@@ -5,9 +5,9 @@ import TrainIcon from '@material-ui/icons/TrainRounded'
 function Header() {
     return (
         <div className="head1">
-        <IconButton><a href="/"><TrainIcon/></a></IconButton>
-        <h1>Railway Ticketing System</h1>
-    </div>
+            <IconButton><a href="/"><TrainIcon/></a></IconButton>
+            <h1>Railway Ticketing System</h1>
+        </div>
     )
 }
 

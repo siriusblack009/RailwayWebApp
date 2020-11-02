@@ -8,6 +8,8 @@ import SignUp from './SignUp/SignUp'
 import TrainList from './TrainList/TrainList'
 import Passenger from './Passenger/Passenger'
 import AdminPage from './AdminPage/AdminPage'
+import AddTrain from './AddTrain/AddTrain'
+import Ticket from './Ticket/Ticket'
 function App() {
     return (
         <>
@@ -21,6 +23,8 @@ function App() {
                     <Route path='/trainlist' component={TrainList}/>
                     <Route path="/passenger" component={Passenger}></Route>
                     <Route path="/adminpage" component={AdminPage}/>
+                    <Route path="/addtrain" component={AddTrain}/>
+                    <Route path="/ticket" component={Ticket}/>
                 </Switch>
 
             </Router>

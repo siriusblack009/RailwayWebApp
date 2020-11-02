@@ -1,5 +1,11 @@
-.adminpage{
+.super__container{
+    display: grid;
+    
+}
+.container{
     display: flex;
-    flex-direction: row;
-    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0;
 }
