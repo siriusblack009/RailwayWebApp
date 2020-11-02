@@ -1,0 +1,92 @@
+.box1{
+    display: flex;
+    flex:0.85;
+    padding: 0px;
+    margin: 0px;
+    flex-direction:row;
+}
+.box1>.extra1
+{
+    display: flex;
+    flex: 0.10;
+}
+.box1>.contain2{
+    display: flex;
+    flex: 0.80;
+    background-color: #ededed;
+    height: 76vh;
+    width: 100vw;
+    box-shadow:-1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+    margin-top: 10px;
+    flex-direction: column;
+    
+}
+.box1>.contain2>.header_contain{
+    flex: 0.15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1>.contain2>.form{
+    flex: 0.85;
+    display: flex;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 0.25;
+}
+.content{
+    flex-direction: row;
+    display: flex;
+    flex: 0.33;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    align-self: center;
+    margin-right: 7px;
+}
+input{
+    border-radius:5px;
+    border: none;
+}
+select{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+select:focus,input:focus{
+    border: 0.1px solid black;
+}
+.second{
+    display: flex;
+    flex: 0.25;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cont{
+    display: flex;
+    flex: 0.5;
+    justify-content: center;
+    align-items: center;
+}
+.btn2{
+    background-color:darkblue;
+    border: 0.3px solid gray;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    padding:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    
+}
+.btn2:hover{
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+}

@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    flex: 0.15;
+    flex-direction: row;
+}
+.header_left{
+    display: flex;
+    flex: 0.50;
+    flex-direction: row;
+}
+.icon{
+    display: flex;
+    flex: 0.30;
+    align-items: center;
+    justify-content: flex-end;
+}
+.title{
+    display: flex;
+    flex: 0.70;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.header_right
+{
+    display: flex;
+    flex: 0.50;
+    flex-direction: row;
+}
+.login{
+    display: flex;
+    flex: 0.50;
+    justify-content: space-evenly;
+}
+.login>a,.signup1>a{
+    text-decoration: none;
+}

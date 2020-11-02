@@ -1,0 +1,54 @@
+.box{
+   align-items: center;
+   flex-direction: row;
+}
+.tabl{
+    margin: 30px;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+   
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.table_header{
+    display: flex;
+    flex: 0.10;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: center;
+    
+}
+.table_body{
+    display: flex;
+    flex: 0.90;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.tr{
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.td{
+    display: flex;
+    flex: 0.20;
+    justify-content: center;
+}
+.head{
+    display: flex;
+    flex:0.20;
+    justify-content: center;
+}
+.td>.btn3{
+    background-color: darkblue;
+    color: white;
+    padding-right: -15px;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}

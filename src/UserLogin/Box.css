@@ -1,0 +1,79 @@
+.box{
+    display: flex;
+    flex: 0.85;
+    flex-direction: row;
+    position: relative;
+    
+}
+.box>img{
+    position: absolute;
+    width: 100vw;
+    height: 83vh;
+}
+.image{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    position: absolute;
+    width: 99vw;
+    
+}
+.extra
+{
+    display: flex;
+    flex:0.15;
+}
+.book{
+    display:flex;
+    flex: 0.20;
+    justify-content: flex-start;
+    background-color:rgba(245, 253, 249, 0.822);
+    margin-top: 10px;
+    height: 76vh;
+    width: 100vw;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+    flex-direction: column;
+    border: 2px solid pink;
+    border-radius: 2px;
+}
+.book>.book_header{
+    display: flex;
+    flex:0.30;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.book>.book_header>h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+.book>.form{
+    display: flex;
+    flex:0.70;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+.book>.form>.text{
+    margin-bottom:15px;
+}
+input{
+    border: 2px solid darkblue;
+    border-radius: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.new{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+}
+.new>h3{
+    margin-top: 29px;
+    margin-bottom: -36px;
+}
+

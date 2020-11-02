@@ -1,0 +1,123 @@
+.box{
+    display: flex;
+    flex: 0.85;
+    flex-direction: row;
+    position: relative;
+    
+}
+.box>img{
+    position: absolute;
+    width: 100vw;
+    height: 83.5vh;
+}
+.image{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    position: absolute;
+   
+}
+.extra
+{
+    display: flex;
+    flex:0.15;
+}
+.book{
+    display:flex;
+    flex: 0.20;
+    justify-content: flex-start;
+    background-color: #ededed;
+    margin-top: 10px;
+    height: 76vh;
+    width: 100vw;
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+    flex-direction: column;
+}
+.book__header{
+    display: flex;
+    flex:0.20;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    flex:0.80;
+    flex-direction: column;
+}
+.title3{
+    display: flex;
+    flex:0.60;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.book1{
+    display: flex;
+    flex: 0.70;
+    justify-content: center;
+    align-items: center;
+    
+}
+.urticket{
+    display: flex;
+    flex: 0.30;
+    
+}
+.book1>h3{
+    align-items: center;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.urticket>h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+.icon1>.MuiSvgIcon-root{
+    font-size: 24px !important;
+    color: gray;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.form-control>input{
+  border: 0.5px solid gray;
+  border-radius: 2px;
+  margin:10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex: 0.20;
+  padding:5px;
+}
+.form-control>.MuiButtonBase-root{
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.form-control>input[type=date]
+{
+    margin-top: 20px;
+}
+.btn1{
+    display: flex;
+    flex:0.40;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    margin-top: 40px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color:darkblue;
+    border: 0.3px solid gray;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
