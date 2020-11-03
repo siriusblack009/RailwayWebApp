@@ -2,6 +2,8 @@ import React, { useState, useReducer } from "react";
 import "./Box.css";
 import Spinner from "./Spinner";
 import { useHistory } from "react-router-dom";
+import Axios from "axios";
+import { server_url } from "../constants";
 function Box() {
   const history = useHistory();
   const defaultState = {
@@ -30,37 +32,35 @@ function Box() {
       alert("Please Enter Name");
       return;
     }
-<<<<<<< HEAD
-    const [state,dispatch]=useReducer(reducer,defaultState);
-    
-    const [name,setName]=useState('')
-    const [age,setAge]=useState(0);
-    const handleClick=()=>{
-        if(!name.trim()){
-            alert("Please Enter Name")
-            return;
-        }
-        if(age<0||age>150){
-            alert("Please Enter Valid Age")
-            return;
-        }
-        dispatch({type:"open_spinner"})
-    } 
-    const closeSpinner=()=>{
-        dispatch({type:"close_spinner"})
-        
-        history.push("/ticket")
-=======
     if (age < 0 || age > 150) {
       alert("Please Enter Valid Age");
       return;
->>>>>>> 30f353e48e96fbf71d44ac9e06b6aec4784417e1
     }
     dispatch({ type: "open_spinner" });
+    var url = server_url + "passenger/";
+    const params = {
+      user_name: name,
+      age: age,
+      gender: "Male",
+      train_number: history.location.state.train_number,
+      source: history.location.state.source,
+      destination: history.location.state.destination,
+      cost: history.location.state.cost,
+    };
+    console.log(params);
+    console.log(url);
+    Axios.post(url, params).then((response) => {
+      console.log(response);
+      history.push({
+        pathname: "/ticket",
+        state: response.data,
+      });
+    });
+    dispatch({ type: "close_spinner" });
   };
   const closeSpinner = () => {
-    dispatch({ type: "close_spinner" });
-    history.push("/ticket");
+    // dispatch({ type: "close_spinner" });
+    // history.push("/ticket");
   };
 
   return (

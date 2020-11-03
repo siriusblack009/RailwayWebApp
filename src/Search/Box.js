@@ -68,26 +68,26 @@ function Box() {
           <div className="form">
             <form action="">
               <div className="form-control">
-                <select
-                  name="source"
-                  id="source"
+                <input
+                  type="text"
+                  placeholder="Enter Source"
+                  required
+                  className="text"
                   onChange={(e) => setSr(e.target.value)}
-                >
-                  {source()}{" "}
-                </select>
+                />
                 <IconButton>
                   {" "}
                   <ArrowIcon></ArrowIcon>
                   <Up />
                 </IconButton>
 
-                <select
-                  name="destination"
-                  id="destination"
+                <input
+                  type="text"
+                  placeholder="Enter Destination"
+                  required
+                  className="text"
                   onChange={(e) => setDest(e.target.value)}
-                >
-                  {source()}
-                </select>
+                />
 
                 <input
                   type="date"

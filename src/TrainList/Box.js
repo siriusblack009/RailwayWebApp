@@ -36,13 +36,13 @@ function Box() {
 
   const url = server_url + "search/";
   const params = {
-    start: "Agra",
-    stop: "Agra2",
+    start: source,
+    stop: dest,
   };
   useEffect(() => {
     Axios.post(url, params).then((response) => {
       setContent(response.data);
-      console.log(content);
+      //   console.log(content);
       generateData();
     });
   }, []);
@@ -82,6 +82,7 @@ function Box() {
     for (var i = 0; i < content.length; i++) {
       //   if (content[i].Seats === 0) continue;
       var train_number = content[i].train_number;
+      var train_cost = content[i].cost;
       res.push(
         <div className="tr">
           <div className="td">{i + 1}</div>
@@ -99,6 +100,7 @@ function Box() {
                     train_number: train_number,
                     source: source,
                     destination: dest,
+                    cost: train_cost,
                   },
                 })
               }
@@ -109,30 +111,6 @@ function Box() {
         </div>
       );
     }
-<<<<<<< HEAD
-    function generateData(){
-        let res=[];
-        for(var i=0;i<content.length;i++){
-            if(content[i].Seats===0)continue;
-            res.push(
-                <div className="tr">
-                    
-            <div className="td" >{i+1}</div>
-            <div className="td" >{content[i].Train_No}</div>
-            <div className="td">{content[i].Train_Name}</div>
-            <div className="td">{content[i].Seats}</div>
-            <div className="td"><button className="btn3" onClick={()=>history.push('/passenger')}
-            >Select</button></div>
-                </div>
-            )
-        } 
-        if(res.length===0){
-            res.push(
-                <h1 style={{justifySelf:"center",justifyContent:"center",alignContent:'center',marginLeft:"35vw"}}>No Trains Available</h1>
-            )
-        }
-        return res;
-=======
     if (res.length === 0) {
       res.push(
         <h1
@@ -146,7 +124,6 @@ function Box() {
           No Trains Available
         </h1>
       );
->>>>>>> 30f353e48e96fbf71d44ac9e06b6aec4784417e1
     }
     return res;
   }
