@@ -24,7 +24,7 @@ function Header() {
                    <a  href="/userlogin"><h3>Login</h3></a> 
                </div>
                <div className="signup1">
-                   <a href="/signup"><h3>SignUp</h3></a> </div>
+                   <a href="/bookings"><h3>Bookings</h3></a> </div>
            </div>
        </div>
       

@@ -10,6 +10,7 @@ import Passenger from './Passenger/Passenger'
 import AdminPage from './AdminPage/AdminPage'
 import AddTrain from './AddTrain/AddTrain'
 import Ticket from './Ticket/Ticket'
+import Bookings from './Bookings/Bookings'
 function App() {
     return (
         <>
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/adminpage" component={AdminPage}/>
                     <Route path="/addtrain" component={AddTrain}/>
                     <Route path="/ticket" component={Ticket}/>
+                    <Route path='/bookings'component={Bookings}/>
                 </Switch>
 
             </Router>

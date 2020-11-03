@@ -19,6 +19,7 @@ function Box() {
             if(content[i].Seats===0)continue;
             res.push(
                 <div className="tr">
+                    
             <div className="td" >{i+1}</div>
             <div className="td" >{content[i].Train_No}</div>
             <div className="td">{content[i].Train_Name}</div>

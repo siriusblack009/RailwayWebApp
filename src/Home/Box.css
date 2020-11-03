@@ -36,14 +36,14 @@
     border: 2px solid pink;
     border-radius: 2px;
 }
-.User{
+.User1{
     display: flex;
     flex:0.5;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.User>button{
+.User1>button{
     
     font-size: 25px;
     padding-top: 5px;
@@ -56,14 +56,14 @@
     border-radius: 2px;
     cursor: pointer;
 }
-.admin{
+.admin1{
     display: flex;
     flex:0.5;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.admin>button{
+.admin1>button{
     font-size: 25px;
     padding-top: 5px;
     padding-bottom: 5px;

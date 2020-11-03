@@ -39,7 +39,8 @@ function Box() {
     } 
     const closeSpinner=()=>{
         dispatch({type:"close_spinner"})
-        history.push('/ticket')
+        
+        history.push("/ticket")
     }
     const history=useHistory();
    

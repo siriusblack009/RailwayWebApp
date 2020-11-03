@@ -19,11 +19,11 @@ function Box() {
                 
                 <div className="book">
                     
-                        <div className="User">
+                        <div className="User1">
                             <button onClick={handleClick}>User</button>
                         </div>
                         
-                        <div className="admin" onClick={handleClick1}><button>Admin</button></div>
+                        <div className="admin1" onClick={handleClick1}><button>Admin</button></div>
                 </div>
             </div>
             
