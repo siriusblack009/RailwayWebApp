@@ -4,10 +4,11 @@ import React,{useState} from 'react'
 import './Footer.css'
 
 function Footer() {
-    let url=window.location.href
+    
+    const [val,setVal]=useState([])
     const history=useHistory()
-    const [stops,setStops]=useState(0);
-    const [show,setShow]=useState(false)
+    
+    
     const [details,setDetails]=useState({train_name:"",train_no:0,seats:0,src:"",src_arr:"",src_dep:"",src_halt:"",dest:"",dest_arr:"",dest_dep:"",dest_halt:""})
     const handleChange=(e)=>{
         const{name,value}=e.target;
@@ -27,12 +28,11 @@ function Footer() {
         return res;
     }
     const handleSubmit=()=>{
-        if(stops===0){
-            alert("Please specify number");
-            return;
-        }
-        setShow(true);
         
+        
+        const values=[...val]
+        values.push({stop:"",stop_arr:"",stop_dest:"",stop_halt:""})
+        setVal(values);
     }
     const handleSubmit1=()=>{
        
@@ -63,38 +63,40 @@ function Footer() {
         alert("Train Added")
         history.push('/adminpage')
     }
-    const stop=[
-        <div className="a">
-            <div className="b">
-                Stop:
-            </div>
-            <div className="b">
-                <label htmlFor="arr">Arrival Time:</label>
-                <input type="time" step="5"/>
-            </div>
-            <div className="b">
-                <label htmlFor="dep">Departure Time:</label>
-                <input type="time" step="5"/>
-            </div>
-            <div className="b">
-                <label htmlFor="halt">Halt Time:</label>
-                <input type="time" step="5"/>
-            </div>
-        </div>
-
-    ]
-    function displayStops(n){
-        let res=[];
-        for(var i=0;i<n;i++){
-            res.push(stop);
+    
+   
+    const handleInputChange=(index,e)=>{
+        const values=[...val];
+        if(e.target.name==="stop"){
+            values[index].stop=e.target.value;
         }
-        let res1=[];
-        res1.push(
-            <div className="d">
-                {res}
-            </div>
-        )
-        return res1;
+        else if(e.target.name==="arr"){
+            values[index].stop_arr=e.target.value;
+
+        }
+        else if(e.target.value==="dep"){
+            values[index].stop_dest=e.target.value;
+        }
+        else{
+            values[index].stop_halt=e.target.value;
+        }
+        setVal(values)
+    }
+    const handleClick=()=>{
+        if(val[val.length-1].stop===details.src||val[val.length-1].stop===details.dest){
+            alert("Please enter different station")
+            return;
+        }
+        const values=[...val]
+        values.push({stop:"",stop_arr:"",stop_dest:"",stop_halt:""})
+        setVal(values);
+    }
+    const handleCLick1=(index)=>{
+        
+        const values=[...val];
+        values.splice(index,1);
+        setVal(values);
+        
     }
     return (
         <>
@@ -176,9 +178,8 @@ function Footer() {
                 </div>
                 <div className="first">
                 <div className="cont">
-                    <label htmlFor="">No of Stops:</label>
-                    <input type="number" placeholder="Enter no of Stops" onChange={(e)=>setStops(e.target.value)}/>
-                     <button  className="btn2" onClick={handleSubmit}>Add Stops</button>
+                   
+                     <button  className="btn2" onClick={handleSubmit}>Add Stop</button>
                     </div>
                     <div className="cont">
                      <button  className="btn2" onClick={handleSubmit1}>Submit</button>
@@ -190,7 +191,38 @@ function Footer() {
        
     </div>
        
-            {show&& displayStops(stops)}        
+            {/* {show&& displayStops(stops)}         */}
+           { <div className="d">
+                {val.map((val,index)=>(
+                     <div className="a">
+                     <div className="b">
+                         <label htmlFor="stop">Stop:</label>
+                         <select name="stop" id="stop" value={val.stop} onChange={e=>handleInputChange(index,e)} >
+                                     {st()}
+                                 </select>
+                     </div>
+                     <div className="b">
+                         <label htmlFor="arr">Arrival Time:</label>
+                         <input type="time" step="5" name="arr" value={val.stop_arr} onChange={e=>handleInputChange(index,e)}/>
+                     </div>
+                     <div className="b">
+                         <label htmlFor="dep">Departure Time:</label>
+                         <input type="time" name="dep" step="5" value={val.stop_dest} onChange={e=>handleInputChange(index,e)}/>
+                     </div>
+                     <div className="b">
+                         <label htmlFor="halt">Halt Time:</label>
+                         <input type="time" name="halt" step="5" value={val.stop_halt} onChange={e=>handleInputChange(index,e)}/>
+                     </div>
+                     <div className="b">
+                         <button className="btn2" onClick={()=>handleClick()}>Add Stop</button>
+                     </div>
+                     <div className="b">
+                         <button className="btn2" onClick={(index)=>handleCLick1(index)}>Delete Stop</button>
+                     </div>
+                 </div>
+                ))}
+           
+        </div>}
     </>
     )
 }
