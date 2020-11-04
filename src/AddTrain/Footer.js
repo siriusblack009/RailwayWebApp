@@ -87,6 +87,13 @@ function Footer() {
             alert("Please enter different station")
             return;
         }
+        for(var i=0;i<val.length-1;i++){
+            if(val[i].stop===val[val.length-1].stop)
+            {
+                alert("Please enter different station")
+                return;
+            }
+        }
         const values=[...val]
         values.push({stop:"",stop_arr:"",stop_dest:"",stop_halt:""})
         setVal(values);
