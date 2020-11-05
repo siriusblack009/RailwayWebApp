@@ -74,7 +74,7 @@ function Box() {
             marginLeft: "35vw",
           }}
         >
-          No Trains Available
+          Loading...
         </h1>
       );
       return res;
